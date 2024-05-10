@@ -27,5 +27,13 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+
+      - name: SonarCloud Scaner
+        run: |
+          mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.11.6 \
+          -Dsonar.token=9286aa54ce64aa5e507159ce7c52ae97479a4221 \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.organization=Felipe Cruz \
+          -Dsonar.projectKey=devops-foundation-ms-mensaje
           
     
