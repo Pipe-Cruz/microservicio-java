@@ -18,13 +18,9 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
 
-      - name: Compilation
+      - name: Compilation and Unit Tests
         run: |
-          mvn package
-
-      - name: Unit Tests
-        run: |
-          mvn test
+          mvn clean package test
 
       - name: Setup Java 17 JDK
         uses: actions/setup-java@v4.2.1
