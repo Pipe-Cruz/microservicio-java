@@ -1,0 +1,15 @@
+name: CICD
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run command line
+        run: |
+          echo 'Hola mundo'
+    
