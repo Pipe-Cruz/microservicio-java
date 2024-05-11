@@ -31,7 +31,7 @@ jobs:
       - name: SonarCloud Scaner
         run: |
           mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.11.0.3922:sonar \
-          -Dsonar.token=9286aa54ce64aa5e507159ce7c52ae97479a4221 \
+          -Dsonar.token=sonarqube_token \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.organization=pipe-cruz \
           -Dsonar.projectKey=feature-ms-FelipeCruz-mensaje
