@@ -55,7 +55,7 @@ jobs:
 
       - name: Docker push
         run: |
-          docker push jinba7ittai/feature-ms-FelipeCruz-mensaje:lates
+          docker push jinba7ittai/feature-ms-mensaje:latest
 
           
         
