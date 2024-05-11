@@ -31,9 +31,13 @@ jobs:
       - name: SonarCloud Scaner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-          -Dsonar.projectKey=Pipe-Cruz_microservicio-java \
+          SONAR_TOKEN: ${{ secrets.sonarqube_token }}
+        run: |
+          mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.11.0.3922:sonar \
+          -Dsonar.token=${{ secrets.sonarqube_token }} \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.organization=pipe-cruz \
+          -Dsonar.projectKey=feature-ms-FelipeCruz-mensaje
           -Dsonar.branch.name=feature-ms-FelipeCruz-mensaje
           
         
