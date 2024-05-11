@@ -51,7 +51,7 @@ jobs:
 
       - name: Docker Build
         run: |
-          docker build -t jinba7ittai/feature-ms-FelipeCruz-mensaje:latest .
+          docker build -t jinba7ittai/feature-ms-mensaje:latest .
 
       - name: Docker push
         run: |
