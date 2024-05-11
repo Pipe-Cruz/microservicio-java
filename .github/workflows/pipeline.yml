@@ -37,7 +37,8 @@ jobs:
           -Dsonar.organization=pipe-cruz \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.projectKey=Pipe-Cruz_microservicio-java \
-          -Dsonar.branch.name=feature-ms-FelipeCruz-mensaje
+          -Dsonar.branch.name=feature-ms-FelipeCruz-mensaje \
+          -Dsonar.qualitygate.wait=true
           
         
           
