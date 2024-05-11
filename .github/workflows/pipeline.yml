@@ -34,6 +34,6 @@ jobs:
           -Dsonar.token=9286aa54ce64aa5e507159ce7c52ae97479a4221 \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.organization=Felipe Cruz \
-          -Dsonar.projectKey=devops-foundation-ms-mensaje
+          -Dsonar.projectKey=feature-ms-FelipeCruz-mensaje
           
     
