@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: microservicio-java
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: microservicio-java
@@ -13,6 +13,18 @@ spec:
         app: microservicio-java
     spec:
       containers:
-      - name: feature-ms-felipecruz-mensaje:latest
-      ports:
-      - containerPort: 8080
+      - name: microservicio-java
+        image: feature-ms-felipecruz-mensaje
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservicio-java
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: microservicio-java
